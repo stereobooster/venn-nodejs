@@ -1,0 +1,32 @@
+{
+  "name": "@stereobooster/venn-nodejs",
+  "version": "0.0.1",
+  "description": "Render diagram on the server side with Venn.js, getting image file as output",
+  "keywords": [
+    "venn.js",
+    "venn",
+    "euler"
+  ],
+  "license": "MIT",
+  "repository": "stereobooster/venn-nodejs",
+  "author": "stereooboster",
+  "type": "module",
+  "files": [
+    "index.js"
+  ],
+  "bin": "bin/venn-nodejs.js",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "node test/index.test.js"
+  },
+  "dependencies": {
+    "@upsetjs/venn.js": "^1.4.2",
+    "commander": "^11.0.0",
+    "d3": "^7.9.0",
+    "jsdom": "^22.1.0",
+    "w3c-xmlserializer": "^4.0.0"
+  }
+}
