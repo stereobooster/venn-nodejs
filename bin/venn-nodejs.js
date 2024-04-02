@@ -54,7 +54,7 @@ const sourceRaw = JSON.parse(readFileSync(src === "" ? 0 : src, "utf-8"));
 const chart = venn.VennDiagram();
 d3.select("#venn").datum(sourceRaw.data).call(chart);
 
-const res = serialize(dom.window.document.querySelector("#venn"));
+const res = serialize(dom.window.document.querySelector("#venn svg"));
 
 if (dst) {
   writeFileSync(dst, res);

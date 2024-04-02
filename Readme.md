@@ -1,6 +1,6 @@
 # venn-nodejs
 
-Rendes diagram on the server side with Venn.js, getting image file as output.
+Renders diagram on the server side with [Venn.js](https://github.com/upsetjs/venn.js/), getting image file as output.
 
 Can be used like this:
 

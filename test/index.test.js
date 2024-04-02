@@ -10,9 +10,18 @@ const assertEqualFiles = async (file) => {
 };
 
 if (!existsSync("test/tmp")) mkdirSync("test/tmp");
-if (!existsSync("test/diff")) mkdirSync("test/diff");
 
 test("graph 1", async () => {
   await vennSnap("test/data/g1.json", "test/tmp/g1.svg");
   await assertEqualFiles("g1.svg");
+});
+
+test("lastfm", async () => {
+  try {
+    await vennSnap("test/data/lastfm.json", "test/tmp/lastfm.svg");
+    await assertEqualFiles("lastfm.svg");
+  } catch (e) {
+    assert.match(e, /TypeError: tspan.getComputedTextLength is not a function/);
+    assert.fail("TypeError: tspan.getComputedTextLength is not a function");
+  }
 });
